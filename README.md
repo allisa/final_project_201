@@ -36,6 +36,12 @@ As a user, I want to see how far the chosen place is from my current location, s
 
 As a user, I want to be able to share my impressions about the place I've visited immediately into all well known platforms, so that I could spend less time to open and publish into each app separately.
 
+## Photo Credits
+
+- [Frank Fujimoto](https://www.flickr.com/photos/fmf0/)
+- [Michael Matti](https://www.flickr.com/photos/michaelmattiphotography/) 
+- [ArtBrom](https://www.flickr.com/photos/art-sarah/)
+
 ## Current version
 
 Version 1.0.0

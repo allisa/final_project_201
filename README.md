@@ -8,7 +8,7 @@
 
 ## Description
 
-It's a site for tourists of Seattle with a main page, where you see only a bunch of photos of different tourists attrations. You can roll it (like a grand spinning wheel) in different ways (swipe on mobile?) depending on your platform and get a random photo. If it's something interesting - the user can click on it and get the more visual and text info about the place with a link to (or an actual) google maps. Another functionality is to let user keep and her notes about the place.
+It's a site for tourists of Seattle with a main page, where you see a bunch of photos of different tourists attrations. The user will click through the carousel of images and when they find a location they would like to visit, they will click to get more information. This will take the user to a second page where there will be more images and info on the location. This area will also allow them to takes notes/journal about the location they clicked on. These notes will persist with each visit the user makes to the app.
 
 ## User stories
 
@@ -39,4 +39,3 @@ As a user, I want to be able to share my impressions about the place I've visite
 ## Current version
 
 Version 1.0.0
-

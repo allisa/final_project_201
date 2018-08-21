@@ -16,7 +16,8 @@ AttractionsList.prototype.saveToLocalStorage = function() {
 };
 
 AttractionsList.prototype.removeItem = function(item) {
-  // TODO: remove one item from the attractionList.
+  // DONE: remove one item from the attractionList.
+  this.items.splice(item, 1);
 };
 
 // Product contructor.
@@ -46,7 +47,14 @@ Attraction.allAttractions = [];
 
 function generateAttractions() {
   for (var i = 0; i < locations.length; i++) {
-    new Attraction(locations[i].name, locations[i].imgpath, locations[i].address, locations[i].website, locations[i].geo, locations[i].shortDesc);
+    new Attraction(
+      locations[i].name,
+      locations[i].imgpath,
+      locations[i].address,
+      locations[i].website,
+      locations[i].geo,
+      locations[i].shortDesc
+    );
   }
 }
 

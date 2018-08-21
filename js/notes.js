@@ -34,13 +34,13 @@ function showList() {
     mediaImgElm.className = 'media__images';
     mediaImgElm.appendChild(imgElm);
     var mediaTextElm = document.createElement('p');
-    mediaTextElm.innerText = attraction.descLong;
+    mediaTextElm.innerText = attraction.shortDesc;
     mediaTextElm.className = 'media__text';
     var textAreaElm = document.createElement('textarea');
     textAreaElm.className = 'media__editable';
-    var btnSaveElm = document.appendChild('button');
+    var btnSaveElm = document.createElement('button');
     btnSaveElm.className = 'btn  btn--save';
-    var btnDeleteElm = document.appendChild('button');
+    var btnDeleteElm = document.createElement('button');
     btnDeleteElm.className = 'btn  btn--delete';
     var row = document.createElement('section');
     row.className = 'media-object';
@@ -50,6 +50,7 @@ function showList() {
     row.appendChild(textAreaElm);
     row.appendChild(btnSaveElm);
     row.appendChild(btnDeleteElm);
+    listElm.appendChild(row);
   });
 }
 

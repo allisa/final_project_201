@@ -64,6 +64,7 @@ function showList() {
     btnDeleteElm.className = 'btn  btn--delete';
     btnDeleteElm.textContent = 'Delete';
     btnDeleteElm.dataset.action = 'delete';
+    btnDeleteElm.dataset.index = ndx;
 
     var row = document.createElement('section');
     row.className = 'media-object';
@@ -79,15 +80,19 @@ function showList() {
     listElm.appendChild(row);
 
     btnSaveElm.addEventListener('click', function(e) {
-      attractionsList.items[e.target.parentNode.dataset.index].notes = textAreaElm.value;
+      attractionsList.items[e.target.parentNode.dataset.index].notes =
+        textAreaElm.value;
       attractionsList.saveToLocalStorage();
     });
   });
 }
 
 function removeItemFromList(event) {
-  if (event.target.tagName === 'BUTTON' && event.target.dataset.action === 'delete') {
-  // TODO: When a delete button is clicked, use attractionsList.removeItem to remove the correct item
+  if (
+    event.target.tagName === 'BUTTON' &&
+    event.target.dataset.action === 'delete'
+  ) {
+    // TODO: When a delete button is clicked, use attractionsList.removeItem to remove the correct item
     attractionsList.removeItem(event.target.dataset.index);
     // TODO: Save the attractionsList back to local storage
     attractionsList.saveToLocalStorage();

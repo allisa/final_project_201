@@ -52,6 +52,7 @@ function showList() {
     var btnDeleteElm = document.createElement('button');
     btnDeleteElm.className = 'btn  btn--delete';
     btnDeleteElm.textContent = 'Delete';
+    btnDeleteElm.dataset.action = 'delete';
 
     var row = document.createElement('section');
     row.className = 'media-object';
@@ -71,12 +72,15 @@ function showList() {
 }
 
 function removeItemFromList(event) {
+  if (event.target.tagName === 'BUTTON' && event.target.dataset.action === 'delete') {
   // TODO: When a delete button is clicked, use attractionsList.removeItem to remove the correct item
-  attractionsList.removeItem(event.target.dataset.index);
-  // TODO: Save the attractionsList back to local storage
-  attractionsList.saveToLocalStorage();
-  // TODO: Re-draw the attractions list
-  showList();
+    attractionsList.removeItem(event.target.dataset.index);
+    // TODO: Save the attractionsList back to local storage
+    attractionsList.saveToLocalStorage();
+    // TODO: Re-draw the attractions list
+    clearList();
+    showList();
+  }
 }
 
 // This will initialize the page and draw the attraction list on screen

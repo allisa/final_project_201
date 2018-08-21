@@ -7,7 +7,7 @@ var AttractionsList = function(items) {
 
 AttractionsList.prototype.addItem = function(attraction) {
   // Done: create a new AttractionItem and add it to this.items
-  this.items = new AttractionItem(attraction);
+  this.items.push(attraction);
 };
 
 AttractionsList.prototype.saveToLocalStorage = function() {
@@ -23,21 +23,21 @@ AttractionsList.prototype.removeItem = function(item) {
 var Attraction = function(
   name,
   picturePath,
-  // descShort,
-  // descLong,
-  // pictureAdditional,
-  // pictureCredits,
-  // notes,
-  // geoposition
+  descShort,
+  descLong,
+  pictureAdditional,
+  pictureCredits,
+  notes,
+  geoposition
 ) {
   this.name = name;
   this.picturePath = picturePath;
-  // this.descShort = descShort;
-  // this.descLong = descLong;
-  // this.pictureAdditional = pictureAdditional;
-  // this.pictureCredits = pictureCredits;
-  // (this.notes = notes),
-  // (this.geoposition = geoposition),
+  this.descShort = descShort;
+  this.descLong = descLong;
+  this.pictureAdditional = pictureAdditional;
+  this.pictureCredits = pictureCredits;
+  (this.notes = notes),
+  (this.geoposition = geoposition),
   Attraction.allAttractions.push(this);
 };
 Attraction.allAttractions = [];

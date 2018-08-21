@@ -19,36 +19,33 @@ AttractionsList.prototype.removeItem = function(item) {
   // TODO: remove one item from the attractionList.
 };
 
-var AttractionsItem = function(product, quantity) {
-  this.product = product;
-  this.quantity = quantity;
-};
-
 // Product contructor.
 var Attraction = function(
   name,
   picturePath,
-  descShort,
-  descLong,
-  pictureAdditional,
-  pictureCredits,
-  notes,
-  geoposition
+  // descShort,
+  // descLong,
+  // pictureAdditional,
+  // pictureCredits,
+  // notes,
+  // geoposition
 ) {
   this.name = name;
   this.picturePath = picturePath;
-  this.descShort = descShort;
-  this.descLong = descLong;
-  this.pictureAdditional = pictureAdditional;
-  this.pictureCredits = pictureCredits;
-  (this.notes = notes),
-  (this.geoposition = geoposition),
+  // this.descShort = descShort;
+  // this.descLong = descLong;
+  // this.pictureAdditional = pictureAdditional;
+  // this.pictureCredits = pictureCredits;
+  // (this.notes = notes),
+  // (this.geoposition = geoposition),
   Attraction.allAttractions.push(this);
 };
 Attraction.allAttractions = [];
 
 function generateAttractions() {
-  new Attraction('Fremont Troll', 'img/troll1.jpg');
+  new Attraction('Fremont Troll', 'img/troll.jpg');
+  new Attraction('Museum of Flight', 'img/flight.jpg');
+  new Attraction('Pike Place Market', 'img/pike-place-market.jpg');
 }
 
 // Initialize the app by creating the big list of attractions with images and names

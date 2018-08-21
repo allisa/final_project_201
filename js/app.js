@@ -7,7 +7,7 @@ var AttractionsList = function(items) {
 
 AttractionsList.prototype.addItem = function(attraction) {
   // Done: create a new AttractionItem and add it to this.items
-  this.items = new AttractionItem(attraction);
+  this.items.push(attraction);
 };
 
 AttractionsList.prototype.saveToLocalStorage = function() {
@@ -17,11 +17,6 @@ AttractionsList.prototype.saveToLocalStorage = function() {
 
 AttractionsList.prototype.removeItem = function(item) {
   // TODO: remove one item from the attractionList.
-};
-
-var AttractionsItem = function(product, quantity) {
-  this.product = product;
-  this.quantity = quantity;
 };
 
 // Product contructor.
@@ -48,7 +43,9 @@ var Attraction = function(
 Attraction.allAttractions = [];
 
 function generateAttractions() {
-  new Attraction('Fremont Troll', 'img/troll1.jpg');
+  new Attraction('Fremont Troll', 'img/troll.jpg');
+  new Attraction('Museum of Flight', 'img/flight.jpg');
+  new Attraction('Pike Place Market', 'img/pike-place-market.jpg');
 }
 
 // Initialize the app by creating the big list of attractions with images and names

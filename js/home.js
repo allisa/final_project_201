@@ -3,7 +3,8 @@
 var list;
 
 function loadList() {
-  var attractionItems = JSON.parse(localStorage.getItem('attractionList')) || [];
+  var attractionItems =
+    JSON.parse(localStorage.getItem('attractionList')) || [];
   list = new AttractionsList(attractionItems);
 }
 
@@ -18,20 +19,20 @@ for (var i = 0; i < Attraction.allAttractions.length; i++) {
   carousel.appendChild(imgDiv);
 }
 
-var someNum = 3;
+var someNum = Attraction.allAttractions.length;
 var mySiema = new Siema({
   loop: true,
-  duration: 600,
+  duration: 600
 });
 
-mySiema.goTo(Math.floor(someNum * Math.random())) 
+mySiema.goTo(Math.floor(someNum * Math.random()));
 var spinBtnElm = document.querySelector('#btnRandom');
 var navLeftBtnElm = document.querySelector('#btnLeft');
 var navRightBtnElm = document.querySelector('#btnRight');
 var addBtn = document.querySelector('#addBtn');
 var goToBtn = document.querySelector('#goToBtn');
 
-spinBtnElm.addEventListener('click', function (e) {
+spinBtnElm.addEventListener('click', function(e) {
   e.preventDefault();
   e.stopPropagation();
   mySiema.next(Math.floor(Math.random() * someNum));
@@ -40,7 +41,7 @@ spinBtnElm.addEventListener('click', function (e) {
 navLeftBtnElm.addEventListener('click', () => mySiema.prev());
 navRightBtnElm.addEventListener('click', () => mySiema.next());
 
-addBtn.addEventListener('click', function(){
+addBtn.addEventListener('click', function() {
   if (list.items.includes(Attraction.allAttractions[mySiema.currentSlide])) {
     console.log('item already on list');
   } else {
@@ -48,7 +49,7 @@ addBtn.addEventListener('click', function(){
   }
 });
 
-goToBtn.addEventListener('click', function(){
+goToBtn.addEventListener('click', function() {
   localStorage.setItem('attractionList', JSON.stringify(list.items));
 });
 

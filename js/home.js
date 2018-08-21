@@ -44,6 +44,6 @@ addBtn.addEventListener('click', function(){
 });
 
 goToBtn.addEventListener('click', function(){
-  localStorage.setItem('attractionList', JSON.stringify(list));
+  localStorage.setItem('attractionList', JSON.stringify(list.items));
 });
 

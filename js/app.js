@@ -23,17 +23,19 @@ AttractionsList.prototype.removeItem = function(item) {
 var Attraction = function(
   name,
   picturePath,
+  address,
+  website,
+  geoposition,
   descShort,
-  descLong,
   pictureAdditional,
   pictureCredits,
-  notes,
-  geoposition
+  notes
 ) {
   this.name = name;
   this.picturePath = picturePath;
   this.descShort = descShort;
-  this.descLong = descLong;
+  this.address = address;
+  this.website = website;
   this.pictureAdditional = pictureAdditional;
   this.pictureCredits = pictureCredits;
   (this.notes = notes),

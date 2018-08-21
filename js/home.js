@@ -3,9 +3,9 @@
 var list;
 
 function loadList() {
-  var attractionItems =
-    JSON.parse(localStorage.getItem('attractionList')) || [];
+  var attractionItems = JSON.parse(localStorage.getItem('attractionList')) || [];
   list = new AttractionsList(attractionItems);
+  addBtn.textContent = `Add To List (${list.items.length})`;
 }
 
 for (var i = 0; i < Attraction.allAttractions.length; i++) {
@@ -46,11 +46,13 @@ addBtn.addEventListener('click', function() {
     console.log('item already on list');
   } else {
     list.addItem(Attraction.allAttractions[mySiema.currentSlide]);
+    addBtn.textContent = `Add To List (${list.items.length})`;
   }
 });
 
 goToBtn.addEventListener('click', function() {
   localStorage.setItem('attractionList', JSON.stringify(list.items));
+  window.location.href = 'info.html';
 });
 
 loadList();

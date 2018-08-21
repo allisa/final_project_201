@@ -1,6 +1,11 @@
 'use strict';
 
-var list = new AttractionsList([]);
+var list;
+
+function loadList() {
+  var attractionItems = JSON.parse(localStorage.getItem('attractionList')) || [];
+  list = new AttractionsList(attractionItems);
+}
 
 for (var i = 0; i < Attraction.allAttractions.length; i++) {
   var carousel = document.querySelector('.siema');
@@ -47,3 +52,4 @@ goToBtn.addEventListener('click', function(){
   localStorage.setItem('attractionList', JSON.stringify(list.items));
 });
 
+loadList();

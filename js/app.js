@@ -43,9 +43,9 @@ var Attraction = function(
 Attraction.allAttractions = [];
 
 function generateAttractions() {
-  new Attraction('Fremont Troll', 'img/troll.jpg');
-  new Attraction('Museum of Flight', 'img/flight.jpg');
-  new Attraction('Pike Place Market', 'img/pike-place-market.jpg');
+  for (var i = 0; i < locations.length; i++) {
+    new Attraction(locations[i].name, locations[i].imgpath, locations[i].address, locations[i].website, locations[i].geo, locations[i].shortDesc);
+  }
 }
 
 // Initialize the app by creating the big list of attractions with images and names

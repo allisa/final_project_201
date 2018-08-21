@@ -35,14 +35,25 @@ function showList() {
     mediaImgElm.className = 'media__images';
     mediaImgElm.appendChild(imgElm);
 
+    var mediaNameElm = document.createElement('h2');
+    mediaNameElm.innerText = attraction.name;
+
+    var mediaAddressElm = document.createElement('p');
+    mediaAddressElm.innerText = attraction.address;
+
+    var mediaWebsiteElm = document.createElement('a');
+    mediaWebsiteElm.href = attraction.website;
+    mediaWebsiteElm.target = '_blank';
+    mediaWebsiteElm.innerText = attraction.website;
+
     var mediaTextElm = document.createElement('p');
-    mediaTextElm.innerText = attraction.shortDesc;
+    mediaTextElm.innerText = attraction.descShort;
     mediaTextElm.className = 'media__text';
 
     var textAreaElm = document.createElement('textarea');
     textAreaElm.className = 'media__editable';
     textAreaElm.id = `ta-${ndx}`;
-    textAreaElm.value = attraction.notes;
+    textAreaElm.value = attraction.notes || '';
 
     var btnSaveElm = document.createElement('button');
     btnSaveElm.className = 'btn  btn--save';
@@ -58,6 +69,9 @@ function showList() {
     row.className = 'media-object';
     row.dataset.index = ndx;
     row.appendChild(mediaImgElm);
+    row.appendChild(mediaNameElm);
+    row.appendChild(mediaAddressElm);
+    row.appendChild(mediaWebsiteElm);
     row.appendChild(mediaTextElm);
     row.appendChild(textAreaElm);
     row.appendChild(btnSaveElm);

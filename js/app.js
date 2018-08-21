@@ -12,7 +12,7 @@ AttractionsList.prototype.addItem = function(attraction) {
 
 AttractionsList.prototype.saveToLocalStorage = function() {
   // DONE: save the contents of the attractionList to localStorage
-  localStorage.setItem(JSON.stringify(this));
+  localStorage.setItem(attractionList, JSON.stringify(this.items));
 };
 
 AttractionsList.prototype.removeItem = function(item) {
@@ -31,6 +31,7 @@ var Attraction = function(
   descShort,
   descLong,
   pictureAdditional,
+  pictureCredits,
   notes,
   geoposition
 ) {
@@ -39,6 +40,7 @@ var Attraction = function(
   this.descShort = descShort;
   this.descLong = descLong;
   this.pictureAdditional = pictureAdditional;
+  this.pictureCredits = pictureCredits;
   (this.notes = notes),
   (this.geoposition = geoposition),
   Attraction.allAttractions.push(this);

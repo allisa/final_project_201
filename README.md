@@ -39,13 +39,18 @@ As a user, I want to be able to share my impressions about the place I've visite
 ## Photo Credits
 
 - [Frank Fujimoto](https://www.flickr.com/photos/fmf0/)
-- [Michael Matti](https://www.flickr.com/photos/michaelmattiphotography/) 
+- [Michael Matti](https://www.flickr.com/photos/michaelmattiphotography/)
 - [ArtBrom](https://www.flickr.com/photos/art-sarah/)
 - University of WAshington: Photo by Ashley Whitlatch on Unsplash
 - Chihuly Glass: Photo by Jonathan Meyer on Unsplash
 - Ferris Wheel: Photo by Vincent Camacho on Unsplash
 - Space Needle: Photo by Timothy Eberly on Unsplash
 - Pike Place Market: Photo by Honey Caranzo on Unsplash
+
+## Descriptions Credits
+
+[Wikipedia:Text of Creative Commons Attribution-ShareAlike 3.0 Unported License](https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License), [GNU Free Documentation License](http://www.gnu.org/copyleft/fdl.html)
+
 ## Current version
 
 Version 1.0.0

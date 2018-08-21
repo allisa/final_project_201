@@ -30,19 +30,30 @@ function showList() {
     imgElm.src = attraction.picturePath;
     imgElm.alt = `Picture of ${attraction.name}`;
     imgElm.className = 'media__image';
+
     var mediaImgElm = document.createElement('div');
     mediaImgElm.className = 'media__images';
     mediaImgElm.appendChild(imgElm);
+
     var mediaTextElm = document.createElement('p');
     mediaTextElm.innerText = attraction.shortDesc;
     mediaTextElm.className = 'media__text';
+
     var textAreaElm = document.createElement('textarea');
     textAreaElm.className = 'media__editable';
+    textAreaElm.id = `ta-${ndx}`;
+    textAreaElm.value = attraction.notes;
+
     var btnSaveElm = document.createElement('button');
     btnSaveElm.className = 'btn  btn--save';
+    btnSaveElm.textContent = 'Save';
+    btnSaveElm.id = `btn-${ndx}`;
+
     var btnDeleteElm = document.createElement('button');
     btnDeleteElm.className = 'btn  btn--delete';
+    btnDeleteElm.textContent = 'Delete';
     btnDeleteElm.dataset.action = 'delete';
+
     var row = document.createElement('section');
     row.className = 'media-object';
     row.dataset.index = ndx;
@@ -52,6 +63,11 @@ function showList() {
     row.appendChild(btnSaveElm);
     row.appendChild(btnDeleteElm);
     listElm.appendChild(row);
+
+    btnSaveElm.addEventListener('click', function(e) {
+      attractionsList.items[e.target.parentNode.dataset.index].notes = textAreaElm.value;
+      attractionsList.saveToLocalStorage();
+    });
   });
 }
 

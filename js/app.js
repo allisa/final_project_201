@@ -12,7 +12,7 @@ AttractionsList.prototype.addItem = function(attraction) {
 
 AttractionsList.prototype.saveToLocalStorage = function() {
   // DONE: save the contents of the attractionList to localStorage
-  localStorage.setItem(attractionList, JSON.stringify(this.items));
+  localStorage.setItem('attractionList', JSON.stringify(this.items));
 };
 
 AttractionsList.prototype.removeItem = function(item) {

@@ -26,14 +26,6 @@ function clearList() {
 
 function showList() {
   attractionsList.items.forEach((attraction, ndx) => {
-    var imgElm = document.createElement('img');
-    imgElm.src = attraction.picturePath;
-    imgElm.alt = `Picture of ${attraction.name}`;
-    imgElm.className = 'media__image';
-
-    var mediaImgElm = document.createElement('div');
-    mediaImgElm.className = 'media__images';
-    mediaImgElm.appendChild(imgElm);
 
     var mediaNameElm = document.createElement('h2');
     mediaNameElm.innerText = attraction.name;
@@ -67,9 +59,12 @@ function showList() {
     btnDeleteElm.dataset.index = ndx;
 
     var row = document.createElement('section');
+    row.style = `background-image: url(${attraction.picturePath});
+    background-repeat: no repeat;
+    background-position: center center;
+    background-size: cover`;
     row.className = 'media-object';
     row.dataset.index = ndx;
-    row.appendChild(mediaImgElm);
     row.appendChild(mediaNameElm);
     row.appendChild(mediaAddressElm);
     row.appendChild(mediaWebsiteElm);

@@ -51,6 +51,10 @@ As a user, I want to be able to share my impressions about the place I've visite
 
 [Wikipedia:Text of Creative Commons Attribution-ShareAlike 3.0 Unported License](https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License), [GNU Free Documentation License](http://www.gnu.org/copyleft/fdl.html)
 
+## Other credits
+
+Icon made by [Lucy G](https://www.flaticon.com/authors/lucy-g) from www.flaticon.com
+
 ## Current version
 
 Version 1.0.0

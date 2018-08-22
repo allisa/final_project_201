@@ -6,21 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Tourist Roulette</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald:300" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/reset.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
   <header class="header">
-    <h1 class="header_title">Choose next place to visit <span class="header__em">in Seattle</span> </h1>
-    <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum amet odio, facere voluptatem
-      accusamus explicabo, velit asperiores nulla tempora, eveniet eos ad esse. Tenetur quidem minima harum ad similique.</p>
-    <nav class="nav-bar">
-      <ul class="nav-list">
-        <li class="list__item"><a href="info.html">My Notes</a></li>
-        <li class="list__item"><a href="about-us.html">About Us</a></li>
-      </ul>
-    </nav>
+    <div class="title__wrapper">
+      <h1 class="header__title"><span class="header--common">Choose</span> <span class="header--common">next place to</span>
+        <span class="header--common">visit in<span class="header--em">Seattle</span></span>
+      </h1>
+    </div>
+    <div class="header__helper">
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li class="list__item"><a href="info.html">My Notes</a></li>
+          <li class="list__item"><a href="about-us.html">About Us</a></li>
+        </ul>
+      </nav>
+      <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum amet odio, facere voluptatem
+        accusamus explicabo, velit asperiores nulla tempora, eveniet eos ad esse. Tenetur quidem minima harum ad similique.</p>
+    </div>
   </header>
   <main>
     <div class="wrapper">
@@ -29,7 +36,7 @@
       <button class="btn  btn__nav  --right" id="btnRight">&gt;</button>
       <button class="btn  btn__random" id="btnRandom">Spin</button>
       <button class="btn  btn__add" id="addBtn">Add To List</button>
-      <button class="btn  btn__goTo" id="goToBtn">Go To Notes</button>
+      <button class="btn  btn__goto" id="goToBtn">Go To Notes</button>
     </div>
   </main>
   <footer>

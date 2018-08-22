@@ -71,15 +71,28 @@ body {
   flex: 0 0 auto;
   font-family: "Oswald", sans-serif;
   font-variant: small-caps;
-  width: 100%;j
+  width: 100%;
+}
+
+.header__slogan {
+  background-color: var(--primary);
+  border-top: 1px solid var(--black);
+  font-family: "Oswald", sans-serif;
+  font-variant: small-caps;
+  font-weight: 600;
+  padding: 0.5em 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  width: 100%;
 }
 
 .list__item {
   flex: 0 0 auto;
-  padding: 0.5em;
+  padding-top: 0.2em;
   width: 40%;
   text-align: center;
-  padding-bottom: 0.8em;
+  padding-bottom: 0.4em;
   /* position: relative; 
   bottom: 0.2em;*/
 }
@@ -129,6 +142,9 @@ img {
 }
 
 .btn {
+  font-family: "Oswald", sans-serif;
+  font-variant: small-caps;
+  text-transform: uppercase;
   background-color: var(--primary);
   bottom: 1em;
   border-radius: 5px;
@@ -187,8 +203,8 @@ img {
     font-size: 1.5em;
   }
 
-.nav__wrapper {
-  width: 370px;
-  height: 30vh;
-}
+  .nav__wrapper {
+    width: 370px;
+    height: 30vh;
+  }
 }

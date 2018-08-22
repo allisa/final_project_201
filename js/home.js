@@ -1,12 +1,14 @@
 'use strict';
 
 var list;
+var btnAddNoteText = 'Visit Later';
 
 function loadList() {
   var attractionItems =
     JSON.parse(localStorage.getItem('attractionList')) || [];
   list = new AttractionsList(attractionItems);
-  addBtn.textContent = `Add To List (${list.items.length})`;
+  addBtn.textContent = `${btnAddNoteText} (${list.items.length})`;
+  // addBtn.textContent = `Add To List (${list.items.length})`;
 }
 
 for (var i = 0; i < Attraction.allAttractions.length; i++) {
@@ -51,7 +53,8 @@ addBtn.addEventListener('click', function() {
     console.log('item already on list');
   } else {
     list.addItem(Attraction.allAttractions[mySiema.currentSlide]);
-    addBtn.textContent = `Add To List (${list.items.length})`;
+
+    addBtn.textContent = `${btnAddNoteText} (${list.items.length})`;
   }
 });
 

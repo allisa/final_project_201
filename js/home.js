@@ -3,7 +3,8 @@
 var list;
 
 function loadList() {
-  var attractionItems = JSON.parse(localStorage.getItem('attractionList')) || [];
+  var attractionItems =
+    JSON.parse(localStorage.getItem('attractionList')) || [];
   list = new AttractionsList(attractionItems);
   addBtn.textContent = `Add To List (${list.items.length})`;
 }
@@ -35,7 +36,11 @@ var goToBtn = document.querySelector('#goToBtn');
 spinBtnElm.addEventListener('click', function(e) {
   e.preventDefault();
   e.stopPropagation();
-  mySiema.next(Math.floor(Math.random() * someNum));
+  do {
+    var ranNum = Math.floor(Math.random() * someNum);
+    console.log(`currSlide: ${mySiema.currentSlide}, ranNum: ${ranNum}`);
+  } while (mySiema.currentSlide === ranNum);
+  mySiema.goTo(ranNum);
 });
 
 navLeftBtnElm.addEventListener('click', () => mySiema.prev());

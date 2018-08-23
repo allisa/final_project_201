@@ -11,12 +11,14 @@ body {
 }
 
 .header {
+  position: absolute;
+  left: 50%;
+  top: 1%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
-  top: 1.8em;
-  left: 1.8em;
+  width: 80vw;
   z-index: 1;
 }
 
@@ -26,12 +28,12 @@ body {
 
 .header__title {
   background-color: var(--primary);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   color: var(--black);
   font-family: "Pacifico", cursive, sans-serif;
   font-size: 1.9em;
   line-height: 1.6em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   padding: 0.5em;
   width: 100%;
 }
@@ -46,7 +48,7 @@ body {
 }
 
 .header--common {
-  display: block;
+  display: inline;
 }
 
 .header--em {
@@ -176,21 +178,24 @@ img {
   width: 3em;
 }
 
-/*
 .nav__arrow {
+  background-color: var(--neutral-darker);
+  cursor: pointer;
+  padding: 0.3em;
+  border-radius: 5px;
   position: absolute;
-  top: 40%;
-  fill: var(--neutral-darker);
-  width: 1em;
-  height: auto;
-} */
+  top: 50%;
+  fill: var(--primary);
+  width: 3.5em;
+  height: 3.5em;
+}
 
 .--left {
-  left: 1.5em;
+  left: 1.8em;
 }
 
 .--right {
-  right: 1.5em;
+  right: 1.8em;
 }
 
 .media-object {
@@ -203,7 +208,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   background-color: var(--primary);
   height: fit-content;
   padding: 1em 0;
@@ -220,7 +225,7 @@ img {
 
 .media__editable {
   flex: 1 1 auto;
-  height: 20em;
+  height: 100%;
   width: 80%;
   padding: 1em;
   margin-right: 2em;
@@ -230,6 +235,8 @@ img {
   top: auto;
   left: auto;
   position: initial;
+  width: 100%;
+  transform: initial;
 }
 
 .header__title--wide {
@@ -255,12 +262,28 @@ img {
 }
 
 @media screen and (min-width: 35em) {
+  .header {
+    position: absolute;
+    transform: initial;
+    width: fit-content;
+    top: 1.8em;
+    left: 1.8em;
+  }
   .header__title {
     font-size: 3.3em;
     line-height: 1.3em;
   }
+  .header__notes {
+    top: auto;
+    left: auto;
+    position: initial;
+    width: 100%;
+  }
   .header__title--wide {
     line-height: 1.8em;
+  }
+  .header--common {
+    display: block;
   }
   .nav-bar {
     font-family: "Oswald", sans-serif;
@@ -280,6 +303,7 @@ img {
     width: 35%;
   }
   .media__editable {
+    margin-top: 2em;
     width: 55%;
   }
 }

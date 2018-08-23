@@ -1,13 +1,12 @@
 'use strict';
 
 var list;
-var btnAddNoteText = 'Visit Later';
 
 function loadList() {
   var attractionItems =
     JSON.parse(localStorage.getItem('attractionList')) || [];
   list = new AttractionsList(attractionItems);
-  addBtn.textContent = `${btnAddNoteText} (${list.items.length})`;
+  myNotesBtn.innerHTML = `my notes (${list.items.length})`;
 }
 
 for (var i = 0; i < Attraction.allAttractions.length; i++) {
@@ -33,11 +32,13 @@ var mySiema = new Siema({
 });
 
 mySiema.goTo(Math.floor(someNum * Math.random()));
+// random button hidden until there is many more locations
 var spinBtnElm = document.querySelector('#btnRandom');
 var navLeftBtnElm = document.querySelector('.--left');
 var navRightBtnElm = document.querySelector('.--right');
 var addBtn = document.querySelector('#addBtn');
 var goToBtn = document.querySelector('#goToBtn');
+var myNotesBtn = document.querySelector('.notes-button');
 
 spinBtnElm.addEventListener('click', function(e) {
   e.preventDefault();
@@ -63,7 +64,7 @@ addBtn.addEventListener('click', function() {
     }
   }
   list.addItem(Attraction.allAttractions[mySiema.currentSlide]);
-  addBtn.textContent = `${btnAddNoteText} (${list.items.length})`;
+  myNotesBtn.innerHTML = `my notes (${list.items.length})`;
 });
 
 goToBtn.addEventListener('click', function() {

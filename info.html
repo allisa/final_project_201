@@ -6,31 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tourist Roulette</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald:300" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="header_title"> Locations To Visit <span class="header__em">in Seattle</span> </h1>
-        <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum amet odio, facere
-            voluptatem accusamus explicabo, velit asperiores nulla tempora, eveniet eos ad esse. Tenetur quidem minima harum
-            ad similique.</p>
+    <header class="header header__notes">
+        <div class="title__wrapper">
+          <h1 class="header__title header__title--wide"><span class="header--common">Your notes
+            about<span class="header--em">Seattle</span></span>
+          </h1>
+        </div>
+        <div class="header__slogan">
+          <span>Explore. Take Notes. Repeat.</span>
+        </div>
         <nav class="nav-bar">
-            <ul class="nav-list">
-                <li class="list__item"><a href="index.html">Attractions</a></li>
-                <li class="list__item"><a href="about-us.html">About Us</a></li>
-            </ul>
+          <ul class="nav-list">
+            <li class="list__item"><a href="index.html">attractions</a></li>
+            <li class="list__item"><a href="about-us.html">about us</a></li>
+          </ul>
         </nav>
-    </header>
+        <!-- <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores earum amet odio, facere voluptatem -->
+        <!-- accusamus explicabo, velit asperiores nulla tempora, eveniet eos ad esse. Tenetur quidem minima harum ad similique.</p> -->
+        <!-- </div> -->
+      </header>
 
-    <main id="attractionList">
+    <main id="attractionList" class="main">
     </main>
-
-    <footer>
-        <h5 class="footer__text">Aaron, Allisa, Alex &copy;</h5>
-    </footer>
-
     <script src="js/locations.js"></script>
     <script src="js/app.js"></script>
     <script src="js/notes.js"></script>

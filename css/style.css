@@ -193,6 +193,62 @@ img {
   right: 1.5em;
 }
 
+.media-object {
+  height: max-content;
+  display: flex;
+  align-items: center;
+}
+
+.media__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--primary);
+  height: fit-content;
+  padding: 1em 0;
+}
+
+.media__editable {
+  flex: 1 1 auto;
+  width: 55%;
+  height: 20em;
+  margin-right: 2em;
+}
+
+.header__notes {
+  top: 0.5em;
+  left: 0.5em;
+  position: initial;
+}
+
+.header__title--wide {
+  width: 100%;
+  text-align: center;
+}
+
+.main {
+  height: fit-content;
+}
+
+.media__title {
+  font-size: 2em;
+  margin-bottom: .5em;
+}
+
+.media__description {
+  flex: 1 1 auto;
+  width: 35%;
+  margin: 0.5em;
+  padding: 0.5em;
+  font-family: "Oswald", sans-serif;
+  line-height: 1.4em;
+}
+
+.media__link {
+  display: block;
+  margin-bottom: 0.3em;
+}
+
 @media screen and (min-width: 35em) {
   .header__title {
     font-size: 3.3em;

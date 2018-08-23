@@ -27,16 +27,25 @@ function clearList() {
 function showList() {
   attractionsList.items.forEach((attraction, ndx) => {
 
+    var mediaDescription = document.createElement('div');
+    mediaDescription.className = 'media__description';
+
+    var mediaContainer = document.createElement('div');
+    mediaContainer.className = 'media__container';
+
     var mediaNameElm = document.createElement('h2');
     mediaNameElm.innerText = attraction.name;
+    mediaNameElm.className = 'media__title';
 
     var mediaAddressElm = document.createElement('p');
-    mediaAddressElm.innerText = attraction.address;
+    mediaAddressElm.innerText = `Address: ${attraction.address}`;
+    mediaAddressElm.className = 'media__address';
 
     var mediaWebsiteElm = document.createElement('a');
     mediaWebsiteElm.href = attraction.website;
     mediaWebsiteElm.target = '_blank';
     mediaWebsiteElm.innerText = attraction.website;
+    mediaWebsiteElm.className = 'media__link';
 
     var mediaTextElm = document.createElement('p');
     mediaTextElm.innerText = attraction.descShort;
@@ -65,11 +74,13 @@ function showList() {
     background-size: cover`;
     row.className = 'media-object';
     row.dataset.index = ndx;
-    row.appendChild(mediaNameElm);
-    row.appendChild(mediaAddressElm);
-    row.appendChild(mediaWebsiteElm);
-    row.appendChild(mediaTextElm);
-    row.appendChild(textAreaElm);
+    mediaDescription.appendChild(mediaNameElm);
+    mediaDescription.appendChild(mediaAddressElm);
+    mediaDescription.appendChild(mediaWebsiteElm);
+    mediaDescription.appendChild(mediaTextElm);
+    mediaContainer.appendChild(mediaDescription);
+    row.appendChild(mediaContainer);
+    mediaContainer.appendChild(textAreaElm);
     row.appendChild(btnSaveElm);
     row.appendChild(btnDeleteElm);
     listElm.appendChild(row);

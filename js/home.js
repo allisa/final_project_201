@@ -35,7 +35,7 @@ var navRightBtnElm = document.querySelector('#btnRight');
 var addBtn = document.querySelector('#addBtn');
 var goToBtn = document.querySelector('#goToBtn');
 
-spinBtnElm.addEventListener('click', function(e) {
+spinBtnElm.addEventListener('click', function (e) {
   e.preventDefault();
   e.stopPropagation();
   do {
@@ -48,17 +48,18 @@ spinBtnElm.addEventListener('click', function(e) {
 navLeftBtnElm.addEventListener('click', () => mySiema.prev());
 navRightBtnElm.addEventListener('click', () => mySiema.next());
 
-addBtn.addEventListener('click', function() {
-  if (list.items.includes(Attraction.allAttractions[mySiema.currentSlide])) {
-    console.log('item already on list');
-  } else {
-    list.addItem(Attraction.allAttractions[mySiema.currentSlide]);
-
-    addBtn.textContent = `${btnAddNoteText} (${list.items.length})`;
+addBtn.addEventListener('click', function () {
+  for (var i = 0; i < list.items.length; i++) {
+    if (list.items[i].name === Attraction.allAttractions[mySiema.currentSlide].name) {
+      console.log('item already on list');
+      return;
+    }
   }
+  list.addItem(Attraction.allAttractions[mySiema.currentSlide]);
+  addBtn.textContent = `${btnAddNoteText} (${list.items.length})`;
 });
 
-goToBtn.addEventListener('click', function() {
+goToBtn.addEventListener('click', function () {
   localStorage.setItem('attractionList', JSON.stringify(list.items));
   window.location.href = 'info.html';
 });

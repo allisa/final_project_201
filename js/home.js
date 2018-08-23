@@ -30,8 +30,8 @@ var mySiema = new Siema({
 
 mySiema.goTo(Math.floor(someNum * Math.random()));
 var spinBtnElm = document.querySelector('#btnRandom');
-var navLeftBtnElm = document.querySelector('#arrow-left');
-var navRightBtnElm = document.querySelector('#arrow-right');
+var navLeftBtnElm = document.querySelector('.--left');
+var navRightBtnElm = document.querySelector('.--right');
 var addBtn = document.querySelector('#addBtn');
 var goToBtn = document.querySelector('#goToBtn');
 

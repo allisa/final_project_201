@@ -52,7 +52,6 @@ body {
 }
 
 .header--em {
-  /* background-color: var(--secondary); */
   color: var(--secondary);
   margin-left: 0.2em;
 }
@@ -76,8 +75,6 @@ body {
   width: 40%;
   text-align: center;
   padding-bottom: 0.4em;
-  /* position: relative; 
-  bottom: 0.2em;*/
 }
 
 .list__item a:visited,
@@ -199,7 +196,8 @@ img {
 }
 
 .media-object {
-  height: max-content;
+  position: relative;
+  height: 16em;
   display: flex;
   align-items: center;
 }
@@ -209,15 +207,15 @@ img {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  background-color: var(--primary);
-  height: fit-content;
+  background-color: rgba(232, 232, 209, 0.7);
+  height: 16em;
+  width: 100%;
   padding: 1em 0;
 }
 
 .media__description {
   flex: 1 1 auto;
   margin: 0.5em;
-  /* padding: 0.5em; */
   padding: 1em;
   font-family: "Oswald", sans-serif;
   line-height: 1.4em;
@@ -225,10 +223,11 @@ img {
 
 .media__editable {
   flex: 1 1 auto;
-  height: 100%;
+  height: 65%;
   width: 80%;
   padding: 1em;
-  margin-right: 2em;
+  margin-right: 5em;
+  opacity: initial;
 }
 
 .header__notes {
@@ -303,9 +302,26 @@ img {
     width: 35%;
   }
   .media__editable {
-    margin-top: 2em;
+    margin-top: 3em;
     width: 55%;
   }
+}
+
+.btn--save {
+  position: absolute;
+  bottom: 0.7em;
+  right: 27em;
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
+.btn--delete {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  width: 2em;
+  border: 1px solid var(--black);
+  color: var(--black);
 }
 
 html {

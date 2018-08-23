@@ -62,7 +62,7 @@ function showList() {
 
     var btnDeleteElm = document.createElement('button');
     btnDeleteElm.className = 'btn  btn--delete';
-    btnDeleteElm.textContent = 'Delete';
+    btnDeleteElm.textContent = 'X';
     btnDeleteElm.dataset.action = 'delete';
     btnDeleteElm.dataset.index = ndx;
 

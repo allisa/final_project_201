@@ -246,6 +246,19 @@ main.media-about-us {
   flex: 1;
   flex-direction: column;
   font-family: "Oswald", sans-serif;
+  border: 0.3em solid var(--neutral-darker);
+  height: initial;
+  padding: 1em;
+}
+
+p.media-text {
+  font-weight: bold;
+  padding: 1em;
+}
+
+.media-about-list {
+  line-height: 1.5em;
+  width: 80%;
 }
 
 .header__notes {

@@ -26,7 +26,6 @@ function clearList() {
 
 function showList() {
   attractionsList.items.forEach((attraction, ndx) => {
-
     var mediaDescription = document.createElement('div');
     mediaDescription.className = 'media__description';
 
@@ -37,7 +36,7 @@ function showList() {
     mediaNameElm.innerText = attraction.name;
     mediaNameElm.className = 'media__title';
 
-    var mediaAddressElm = document.createElement('p');
+    var mediaAddressElm = document.createElement('address');
     mediaAddressElm.innerText = `Address: ${attraction.address}`;
     mediaAddressElm.className = 'media__address';
 

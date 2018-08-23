@@ -54,6 +54,8 @@ function showList() {
     textAreaElm.className = 'media__editable';
     textAreaElm.id = `ta-${ndx}`;
     textAreaElm.value = attraction.notes || '';
+    textAreaElm.placeholder= 'Take your notes here.';
+    textAreaElm.rows = '9';
 
     var btnDeleteElm = document.createElement('button');
     btnDeleteElm.className = 'btn  btn--delete';

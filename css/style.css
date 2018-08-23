@@ -6,6 +6,10 @@
   --black: rgba(7, 28, 26, 1);
 }
 
+.html {
+  overflow: hidden;
+}
+
 body {
   margin: 0 auto;
 }
@@ -330,6 +334,8 @@ img {
 html {
   box-sizing: border-box;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 *,

@@ -204,9 +204,6 @@ img {
   align-items: center;
 }
 
-.media-images {
-}
-
 .media__container {
   display: flex;
   flex-direction: column;
@@ -232,6 +229,23 @@ img {
   width: 80%;
   padding: 1em;
   margin-right: 2em;
+}
+
+main.media-about-us {
+  display: flex;
+  justify-content: center;
+}
+
+.media-personal-img {
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+}
+
+.media-personal-object {
+  flex: 1;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
 }
 
 .header__notes {

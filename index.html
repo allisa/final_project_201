@@ -12,6 +12,18 @@
 </head>
 
 <body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="arrow-left" viewBox="0 0 129 129">
+      <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"
+      />
+    </symbol>
+    <symbol id="arrow-right" viewBox="0 0 129 129">
+      <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"
+      />
+    </symbol>
+  </svg>
+
+
   <header class="header">
     <div class="title__wrapper">
       <h1 class="header__title"><span class="header--common">Choose your</span> <span class="header--common">next place to</span>
@@ -34,12 +46,14 @@
   <main>
     <div class="wrapper">
       <div class="siema"></div>
-      <!-- <img class="nav__arrow  --left" src="img/left-arrow.svg" alt="Picture of left navigation arrow"> -->
-      <!-- <img class="nav__arrow  --right" src="img/right-arrow.svg" alt="Picture of right navigation arrow"> -->
+      <svg class="nav__arrow --left">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-left"></use>
+      </svg>
+      <svg class="nav__arrow --right">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+      </svg>
       <div class="nav__wrapper">
         <div class="nav__panel">
-          <button class="btn  btn__nav  --left" id="btnLeft">&lt;</button>
-          <button class="btn  btn__nav  --right" id="btnRight">&gt;</button>
           <button class="btn  btn__random" id="btnRandom">Pick For Me</button>
           <button class="btn  btn__add" id="addBtn">Visit Later</button>
           <button class="btn  btn__goto" id="goToBtn">Take Notes</button>

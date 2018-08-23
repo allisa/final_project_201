@@ -12,6 +12,7 @@
 
 body {
   margin: 0 auto;
+  background-color: var(--neutral);
 }
 
 .header {
@@ -188,7 +189,9 @@ img {
   z-index: 10;
 }
 
+/* random button hidden until there is many more locations */
 .btn__random {
+  display: none;
   bottom: 4em;
   left: 50%;
   transform: translateX(-50%);
@@ -273,8 +276,10 @@ main.media-about-us {
   flex: 1;
   flex-direction: column;
   font-family: "Oswald", sans-serif;
-  border: 0.3em solid var(--neutral-darker);
+  background-color: var(--primary);
+  border-radius: 5px;
   height: initial;
+  margin: 1.5em;
   padding: 1em;
 }
 
@@ -285,7 +290,7 @@ p.media-text {
 
 .media-about-list {
   line-height: 1.5em;
-  width: 80%;
+  width: 90%;
 }
 
 .header__notes {
@@ -390,6 +395,10 @@ p.media-text {
   border: 1px solid var(--black);
   color: var(--black);
   background-color: var(--primary);
+}
+
+.question {
+  font-weight: bold;
 }
 
 html {

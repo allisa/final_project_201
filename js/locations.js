@@ -43,7 +43,7 @@ var locations = [
     geo: '47.62062,-122.35007',
     website: 'https://www.chihulygardenandglass.com/',
     shortDesc:
-      'he project includes three primary components: the Garden, the Glasshouse, and the Interior Exhibits. The installation inside of the Glasshouse is an expansive 100-foot long sculpture and is one of Chihuly’s largest suspended sculptures.'
+      'The project includes three primary components: the Garden, the Glasshouse, and the Interior Exhibits. The installation inside of the Glasshouse is an expansive 100-foot long sculpture and is one of Chihuly’s largest suspended sculptures.'
   },
   {
     name: 'Pike Place Market',

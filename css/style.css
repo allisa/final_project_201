@@ -172,18 +172,20 @@ img {
 }
 
 .btn {
-  background-color: var(--primary);
+  background-color: var(--neutral-darker);
   bottom: 1em;
   border-radius: 5px;
   border: none;
+  color: var(--primary);
   font-family: "Oswald", sans-serif;
-  font-size: 1em;
+  font-size: 1.5em;
   font-variant: small-caps;
+  font-weight: 600;
   height: 2em;
   cursor: pointer;
   position: absolute;
   text-transform: uppercase;
-  width: 10em;
+  width: 9em;
   z-index: 10;
 }
 
@@ -387,8 +389,12 @@ p.media-text {
   top: 0.5em;
   right: 0.5em;
   width: 2em;
+  font-family: monospace;
+  line-height: 0.8em;
+  font-size: 1.3em;
   border: 1px solid var(--black);
   color: var(--black);
+  background-color: var(--primary);
 }
 
 .question {

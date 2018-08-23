@@ -55,11 +55,6 @@ function showList() {
     textAreaElm.id = `ta-${ndx}`;
     textAreaElm.value = attraction.notes || '';
 
-    var btnSaveElm = document.createElement('button');
-    btnSaveElm.className = 'btn  btn--save';
-    btnSaveElm.textContent = 'Save';
-    btnSaveElm.id = `btn-${ndx}`;
-
     var btnDeleteElm = document.createElement('button');
     btnDeleteElm.className = 'btn  btn--delete';
     btnDeleteElm.textContent = 'X';
@@ -80,13 +75,11 @@ function showList() {
     mediaContainer.appendChild(mediaDescription);
     row.appendChild(mediaContainer);
     mediaContainer.appendChild(textAreaElm);
-    row.appendChild(btnSaveElm);
     row.appendChild(btnDeleteElm);
     listElm.appendChild(row);
 
-    btnSaveElm.addEventListener('click', function(e) {
-      attractionsList.items[e.target.parentNode.dataset.index].notes =
-        textAreaElm.value;
+    textAreaElm.addEventListener('keyup', function(e) {
+      attractionsList.items[e.target.parentNode.parentNode.dataset.index].notes = textAreaElm.value;
       attractionsList.saveToLocalStorage();
     });
   });

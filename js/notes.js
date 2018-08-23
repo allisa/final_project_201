@@ -78,7 +78,7 @@ function showList() {
     mediaDescription.appendChild(mediaAddressElm);
     mediaDescription.appendChild(mediaWebsiteElm);
     mediaDescription.appendChild(mediaTextElm);
-    row.appendChild(mediaDescription);
+    mediaContainer.appendChild(mediaDescription);
     row.appendChild(mediaContainer);
     mediaContainer.appendChild(textAreaElm);
     row.appendChild(btnSaveElm);

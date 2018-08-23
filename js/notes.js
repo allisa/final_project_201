@@ -54,15 +54,12 @@ function showList() {
     textAreaElm.className = 'media__editable';
     textAreaElm.id = `ta-${ndx}`;
     textAreaElm.value = attraction.notes || '';
-
-    var btnSaveElm = document.createElement('button');
-    btnSaveElm.className = 'btn  btn--save';
-    btnSaveElm.textContent = 'Save';
-    btnSaveElm.id = `btn-${ndx}`;
+    textAreaElm.placeholder= 'Take your notes here.';
+    textAreaElm.rows = '9';
 
     var btnDeleteElm = document.createElement('button');
     btnDeleteElm.className = 'btn  btn--delete';
-    btnDeleteElm.textContent = 'Delete';
+    btnDeleteElm.textContent = 'X';
     btnDeleteElm.dataset.action = 'delete';
     btnDeleteElm.dataset.index = ndx;
 
@@ -80,13 +77,11 @@ function showList() {
     mediaContainer.appendChild(mediaDescription);
     row.appendChild(mediaContainer);
     mediaContainer.appendChild(textAreaElm);
-    row.appendChild(btnSaveElm);
     row.appendChild(btnDeleteElm);
     listElm.appendChild(row);
 
-    btnSaveElm.addEventListener('click', function(e) {
-      attractionsList.items[e.target.parentNode.dataset.index].notes =
-        textAreaElm.value;
+    textAreaElm.addEventListener('keyup', function(e) {
+      attractionsList.items[e.target.parentNode.parentNode.dataset.index].notes = textAreaElm.value;
       attractionsList.saveToLocalStorage();
     });
   });

@@ -206,9 +206,6 @@ img {
   align-items: center;
 }
 
-.media-images {
-}
-
 .media__container {
   display: flex;
   flex-direction: column;
@@ -235,6 +232,36 @@ img {
   padding: 1em;
   margin-right: 5em;
   opacity: initial;
+}
+
+main.media-about-us {
+  display: flex;
+  justify-content: center;
+}
+
+.media-personal-img {
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+}
+
+.media-personal-object {
+  flex: 1;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  border: 0.3em solid var(--neutral-darker);
+  height: initial;
+  padding: 1em;
+}
+
+p.media-text {
+  font-weight: bold;
+  padding: 1em;
+}
+
+.media-about-list {
+  line-height: 1.5em;
+  width: 80%;
 }
 
 .header__notes {

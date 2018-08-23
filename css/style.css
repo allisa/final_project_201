@@ -101,11 +101,38 @@ body {
   z-index: -1;
 }
 
+.img__wrapper {
+  position: relative;
+}
+
 img {
   object-fit: cover;
   object-position: top center;
   width: 100vw;
   height: 100vh;
+}
+
+.img__caption {
+  background-color: var(--neutral-darker);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: var(--primary);
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2em;
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-left: 0.5em;
+  padding-top: 0.3em;
+  padding-right: 0.3em;
+  padding-bottom: 0.3em;
+  position: absolute;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: right;
+  top: 1%;
+  right: 0.6em;
 }
 
 .nav__wrapper {
@@ -132,7 +159,6 @@ img {
   display: flex;
   justify-content: space-evenly;
   flex: 0 0 auto;
-  font-family: "Oswald", sans-serif;
   font-variant: small-caps;
   width: 100%;
 }
@@ -149,9 +175,8 @@ img {
   border-radius: 5px;
   border: none;
   font-family: "Oswald", sans-serif;
-  font-variant: small-caps;
-  font-family: "Oswald", sans-serif;
   font-size: 1em;
+  font-variant: small-caps;
   height: 2em;
   cursor: pointer;
   position: absolute;
@@ -284,6 +309,12 @@ img {
   }
   .header--common {
     display: block;
+  }
+  .img__caption {
+    /* bottom: 1em; */
+    top: 1.8em;
+    /* width: 20%; */
+    /* transform: initial; */
   }
   .nav-bar {
     font-family: "Oswald", sans-serif;

@@ -8,18 +8,22 @@ function loadList() {
     JSON.parse(localStorage.getItem('attractionList')) || [];
   list = new AttractionsList(attractionItems);
   addBtn.textContent = `${btnAddNoteText} (${list.items.length})`;
-  // addBtn.textContent = `Add To List (${list.items.length})`;
 }
 
 for (var i = 0; i < Attraction.allAttractions.length; i++) {
   var carousel = document.querySelector('.siema');
-  var imgDiv = document.createElement('div');
-  imgDiv.class = 'img__wrapper';
+  var figDiv = document.createElement('figure');
+  figDiv.className = 'img__wrapper';
   var carouselImg = document.createElement('img');
   carouselImg.src = Attraction.allAttractions[i].picturePath;
+  figDiv.appendChild(carouselImg);
 
-  imgDiv.appendChild(carouselImg);
-  carousel.appendChild(imgDiv);
+  var imgCaption = document.createElement('caption');
+  imgCaption.innerText = Attraction.allAttractions[i].name;
+  imgCaption.className = 'img__caption';
+  figDiv.appendChild(imgCaption);
+
+  carousel.appendChild(figDiv);
 }
 
 var someNum = Attraction.allAttractions.length;

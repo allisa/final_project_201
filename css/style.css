@@ -186,7 +186,9 @@ img {
   z-index: 10;
 }
 
+/* random button hidden until there is many more locations */
 .btn__random {
+  display: none;
   bottom: 4em;
   left: 50%;
   transform: translateX(-50%);

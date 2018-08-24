@@ -7,7 +7,7 @@
 }
 
 .html {
-  overflow: hidden;
+  overflow: initial;
 }
 
 body {
@@ -137,23 +137,15 @@ img {
   right: 0.6em;
 }
 
-.nav__wrapper {
-  position: absolute;
-  bottom: 2em;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40vw;
-  height: 30vh;
-  margin: 0 auto;
-}
-
 .nav-bar {
   border-top: 1px solid var(--black);
   display: flex;
+  font-family: "Oswald", sans-serif;
   font-size: 1.4em;
   list-style: none;
   width: 100%;
 }
+
 .nav-list {
   background-color: var(--primary);
   border-bottom-left-radius: 5px;
@@ -165,28 +157,74 @@ img {
   width: 100%;
 }
 
-.nav__panel {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.nav__wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  bottom: 3em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 20%;
+}
+
+.nav__notify {
+  background-color: var(--primary);
+  border-radius: 15px;
+  bottom: 4em;
+  color: var(--neutral-darker);
+  font-size: 0.7em;
+  left: 50%;
+  opacity: 1;
+  padding: 0.3em;
+  position: absolute;
+  transform: translate(-50%);
+  width: fit-content;
+  animation: opacity 3sec ease-out;
+}
+
+.nav__notify:before {
+  content: ".";
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  margin-top: 17px;
+  display: block;
+  transform: translate(-50%);
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--primary);
+}
+
+.--hidden {
+  opacity: 0;
 }
 
 .btn {
+  color: var(--primary);
+  cursor: pointer;
   background-color: var(--neutral-darker);
-  bottom: 1em;
   border-radius: 5px;
   border: none;
-  color: var(--primary);
+  flex: 0 0 auto;
   font-family: "Oswald", sans-serif;
   font-size: 1.5em;
   font-variant: small-caps;
   font-weight: 600;
   height: 2em;
-  cursor: pointer;
-  position: absolute;
   text-transform: uppercase;
   width: 9em;
   z-index: 10;
+}
+
+.btn:active,
+.btn:visited {
+  outline: none;
 }
 
 /* random button hidden until there is many more locations */
@@ -196,12 +234,12 @@ img {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .btn__add {
-  right: 51%;
+  position: relative;
 }
 
 .btn__goto {
-  left: 51%;
 }
 
 .btn__nav {
@@ -336,6 +374,9 @@ p.media-text {
 }
 
 @media screen and (min-width: 35em) {
+  .html {
+    overflow: hidden;
+  }
   .header {
     position: absolute;
     transform: initial;
@@ -343,6 +384,20 @@ p.media-text {
     top: 1.8em;
     left: 1.8em;
   }
+  .nav__wrapper {
+    flex-direction: row;
+    width: 30%;
+  }
+
+  .nav__notify {
+    bottom: 5em;
+  }
+
+  .btn {
+    height: 3em;
+    width: 10em;
+  }
+
   .header__title {
     font-size: 3.3em;
     line-height: 1.3em;
@@ -366,13 +421,7 @@ p.media-text {
     /* transform: initial; */
   }
   .nav-bar {
-    font-family: "Oswald", sans-serif;
     font-size: 1.5em;
-  }
-
-  .nav__wrapper {
-    width: 370px;
-    height: 30vh;
   }
 
   .media__container {

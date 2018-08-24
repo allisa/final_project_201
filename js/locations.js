@@ -34,7 +34,7 @@ var locations = [
     geo: '47.650955, -122.34728',
     website: '',
     shortDesc:
-      'The Fremont Troll (also known as The Troll, or the Troll Under the Bridge) is a public sculpture in the Fremont neighborhood of Seattle, Washington in the United States. The Troll is a mixed media colossal statue, located on N. 36th Street at Troll Avenue N., under the north end of the George Washington Memorial Bridge (also known as the Aurora Bridge). It is clutching an actual Volkswagen Beetle, as if it had just swiped it from the roadway above. The vehicle has a California license plate. The Troll is 5.5 m (18 ft) high, weighs 6,000 kg (13,000 lb), and is made of steel rebar, wire, and concrete.[2] He is interactive—visitors are encouraged to clamber on him or try to poke out his one good eye (a hubcap). The idea of a troll living under a bridge is derived from the Scandinavian (Norwegian) folklore.'
+      'The Fremont Troll (also known as The Troll, or the Troll Under the Bridge) is a public sculpture in the Fremont neighborhood of Seattle, Washington in the United States. The Troll is a mixed media colossal statue, located on N. 36th Street at Troll Avenue N., under the north end of the George Washington Memorial Bridge (also known as the Aurora Bridge). It is clutching an actual Volkswagen Beetle, as if it had just swiped it from the roadway above. The vehicle has a California license plate. The Troll is 5.5 m (18 ft) high, weighs 6,000 kg (13,000 lb), and is made of steel rebar, wire, and concrete. He is interactive—visitors are encouraged to clamber on him or try to poke out his one good eye (a hubcap). The idea of a troll living under a bridge is derived from the Scandinavian (Norwegian) folklore.'
   },
   {
     name: 'Chihuly Garden and Glass',
@@ -52,7 +52,7 @@ var locations = [
     geo: '47.609425, -122.3417',
     website: 'http://pikeplacefish.com',
     shortDesc:
-      'The Pike Place Fish Market, founded in 1930, is an open air fish market located in Seattle, Washington\'s Pike Place Market, at the corner of Pike Street and Pike Place. It is known for their tradition of fishmongers throwing fish that customers have purchased, before they are wrapped.[1] After nearing bankruptcy in 1986, the fish market owner and employees decided to become "world famous", changing their way of doing business by introducing their flying fish, games, and customer performances. Four years later, they were featured repeatedly in the national media and television shows.[2] The store is now a popular tourist destination in Seattle, attracting up to 10,000 daily visitors, and is often billed as world-famous.'
+      'The Pike Place Fish Market, founded in 1930, is an open air fish market located in Seattle, Washington\'s Pike Place Market, at the corner of Pike Street and Pike Place. It is known for their tradition of fishmongers throwing fish that customers have purchased, before they are wrapped. After nearing bankruptcy in 1986, the fish market owner and employees decided to become "world famous", changing their way of doing business by introducing their flying fish, games, and customer performances. Four years later, they were featured repeatedly in the national media and television shows. The store is now a popular tourist destination in Seattle, attracting up to 10,000 daily visitors, and is often billed as world-famous.'
   },
   {
     name: 'Seattle Great Wheel',
@@ -73,7 +73,7 @@ var locations = [
       'The Museum of Flight is a private non-profit air and space museum in the northwest United States. It is located at the southern end of King County International Airport (Boeing Field), in the city of Tukwila, just south of Seattle. It was established in 1965 and is fully accredited by the American Alliance of Museums. As the largest private air and space museum in the world, it also hosts the largest K-12 educational programs in the world. The museum attracts over 500,000 visitors every year. The museum serves more than 140,000 students yearly through both its onsite programs: a Challenger Learning Center, an Aviation Learning Center, and a summer camp (ACE), as well as outreach programs that travel throughout Washington and Oregon.'
   },
   {
-    name: 'Woodland Zoo',
+    name: 'Woodland Park Zoo',
     imgpath: 'img/zoo.jpg',
     address: 'Woodland Park, Seattle, Washington',
     geo: '47.66834, -122.34984',

@@ -28,7 +28,8 @@ function showList() {
   if (attractionsList.items.length === 0) {
     var noNotes = document.createElement('p');
     noNotes.id = 'no-notes';
-    noNotes.innerText = 'You don\'t have any attractions to take notes on. Go back and pick some!';
+    noNotes.innerText =
+      'You don\'t have any attractions to take notes on. Go back and pick some!';
     listElm.appendChild(noNotes);
   }
 
@@ -47,6 +48,17 @@ function showList() {
     mediaAddressElm.innerText = `Address: ${attraction.address}`;
     mediaAddressElm.className = 'media__address';
 
+    var mediaAddressLinkElm = document.createElement('a');
+    mediaAddressLinkElm.href = `https://www.google.com/maps/dir/?api=1&destination=${
+      attraction.geoposition
+    }`;
+    mediaAddressLinkElm.target = '_blank';
+    var mediaAddressIconElm = document.createElement('img');
+    mediaAddressIconElm.src = 'img/google-maps.png';
+    mediaAddressIconElm.className = 'media__google-icon';
+    mediaAddressLinkElm.appendChild(mediaAddressIconElm);
+    mediaAddressElm.appendChild(mediaAddressLinkElm);
+
     var mediaWebsiteElm = document.createElement('a');
     mediaWebsiteElm.href = attraction.website;
     mediaWebsiteElm.target = '_blank';
@@ -61,7 +73,7 @@ function showList() {
     textAreaElm.className = 'media__editable';
     textAreaElm.id = `ta-${ndx}`;
     textAreaElm.value = attraction.notes || '';
-    textAreaElm.placeholder= 'Take your notes here.';
+    textAreaElm.placeholder = 'Take your notes here.';
     textAreaElm.rows = '9';
 
     var btnDeleteElm = document.createElement('button');
@@ -88,7 +100,9 @@ function showList() {
     listElm.appendChild(row);
 
     textAreaElm.addEventListener('keyup', function(e) {
-      attractionsList.items[e.target.parentNode.parentNode.dataset.index].notes = textAreaElm.value;
+      attractionsList.items[
+        e.target.parentNode.parentNode.dataset.index
+      ].notes = textAreaElm.value;
       attractionsList.saveToLocalStorage();
     });
   });

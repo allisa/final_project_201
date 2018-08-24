@@ -292,6 +292,14 @@ img {
   line-height: 1.4em;
 }
 
+.media__google-icon {
+  vertical-align: top;
+  display: inline-block;
+  width: 20px;
+  margin-left: 0.5em;
+  height: auto;
+}
+
 .media__editable {
   flex: 1 1 auto;
   padding: 1em;

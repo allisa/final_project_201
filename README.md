@@ -53,8 +53,8 @@ As a user, I want to be able to share my impressions about the place I've visite
 
 ## Other credits
 
-Icon made by [Lucy G](https://www.flaticon.com/authors/lucy-g) from www.flaticon.com
+Icon made by [Lucy G](https://www.flaticon.com/authors/lucy-g) and [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect) from www.flaticon.com
 
 ## Current version
 
-Version 1.0.0
+Version 1.1.0

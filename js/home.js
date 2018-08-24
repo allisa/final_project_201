@@ -9,6 +9,20 @@ function loadList() {
   myNotesBtn.innerHTML = `my notes (${list.items.length})`;
 }
 
+function informUser() {
+  // var navWrapperElm = document.querySelector('.nav__wrapper');
+  var notifyElm = document.createElement('span');
+  notifyElm.className = 'nav__notify';
+  notifyElm.textContent = 'Added to my notes!';
+  addBtn.appendChild(notifyElm);
+  // notifyElm.classList.toggle('--hidden');
+  // setTimeout(() => {
+  //   notifyElm.classList.toggle('--hidden');
+  // }, 2600);
+  setTimeout(() => notifyElm.remove(), 3000);
+}
+
+// Built DOM for all our attraction objects
 for (var i = 0; i < Attraction.allAttractions.length; i++) {
   var carousel = document.querySelector('.siema');
   var figDiv = document.createElement('figure');
@@ -25,14 +39,14 @@ for (var i = 0; i < Attraction.allAttractions.length; i++) {
   carousel.appendChild(figDiv);
 }
 
-var someNum = Attraction.allAttractions.length;
+var attrNumber = Attraction.allAttractions.length;
 var mySiema = new Siema({
   loop: true,
   duration: 600
 });
 
-mySiema.goTo(Math.floor(someNum * Math.random()));
-// random button hidden until there is many more locations
+// skip to random phoro on load
+mySiema.goTo(Math.floor(attrNumber * Math.random()));
 var spinBtnElm = document.querySelector('#btnRandom');
 var navLeftBtnElm = document.querySelector('.--left');
 var navRightBtnElm = document.querySelector('.--right');
@@ -40,15 +54,16 @@ var addBtn = document.querySelector('#addBtn');
 var goToBtn = document.querySelector('#goToBtn');
 var myNotesBtn = document.querySelector('.notes-button');
 
-spinBtnElm.addEventListener('click', function(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  do {
-    var ranNum = Math.floor(Math.random() * someNum);
-    console.log(`currSlide: ${mySiema.currentSlide}, ranNum: ${ranNum}`);
-  } while (mySiema.currentSlide === ranNum);
-  mySiema.goTo(ranNum);
-});
+// For future development
+// spinBtnElm.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   e.stopPropagation();
+//   do {
+//     var ranNum = Math.floor(Math.random() * someNum);
+//     console.log(`currSlide: ${mySiema.currentSlide}, ranNum: ${ranNum}`);
+//   } while (mySiema.currentSlide === ranNum);
+//   mySiema.goTo(ranNum);
+// });
 
 navLeftBtnElm.addEventListener('click', () => mySiema.prev());
 navRightBtnElm.addEventListener('click', () => mySiema.next());
@@ -58,17 +73,17 @@ addBtn.addEventListener('click', function() {
     if (
       list.items[i].name ===
       Attraction.allAttractions[mySiema.currentSlide].name
-    ) {
-      console.log('item already on list');
+    )
       return;
-    }
   }
+  informUser();
   list.addItem(Attraction.allAttractions[mySiema.currentSlide]);
+  localStorage.setItem('attractionList', JSON.stringify(list.items));
   myNotesBtn.innerHTML = `my notes (${list.items.length})`;
+  mySiema.next();
 });
 
 goToBtn.addEventListener('click', function() {
-  localStorage.setItem('attractionList', JSON.stringify(list.items));
   window.location.href = 'info.html';
 });
 

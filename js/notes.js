@@ -25,6 +25,13 @@ function clearList() {
 }
 
 function showList() {
+  if (attractionsList.items.length === 0) {
+    var noNotes = document.createElement('p');
+    noNotes.id = 'no-notes';
+    noNotes.innerText = 'You don\'t have any attractions to take notes on. Go back and pick some!';
+    listElm.appendChild(noNotes);
+  }
+
   attractionsList.items.forEach((attraction, ndx) => {
     var mediaDescription = document.createElement('div');
     mediaDescription.className = 'media__description';
@@ -102,5 +109,5 @@ function removeItemFromList(event) {
   }
 }
 
-// This will initialize the page and draw the attraction list on screen
+// This will initialize the page and draw the attraction list on screen\
 renderList();

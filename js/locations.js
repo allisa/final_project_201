@@ -1,4 +1,5 @@
 'use strict';
+// could add locations to globals in .eslintrc.json to avoid some of the error messages.
 var locations = [
   {
     name: 'Univeristy of Washington',

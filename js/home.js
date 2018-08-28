@@ -10,6 +10,7 @@ function loadList() {
 }
 
 function informUser() {
+  // lots of zombie code! It's always best to remove code like this.
   // var navWrapperElm = document.querySelector('.nav__wrapper');
   var notifyElm = document.createElement('span');
   notifyElm.className = 'nav__notify';

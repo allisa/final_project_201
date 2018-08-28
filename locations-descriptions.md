@@ -1,3 +1,5 @@
+<!-- It seems like this file is left over from some earlier iteration of the assets directory... it could probably be removed. -->
+
 > Space Needle
 -
 

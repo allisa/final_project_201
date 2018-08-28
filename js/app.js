@@ -6,6 +6,7 @@ var AttractionsList = function(items) {
 };
 
 AttractionsList.prototype.addItem = function(attraction) {
+  // Leaving around comments that are completed TODOs from lab is probably not necessary.
   // Done: create a new AttractionItem and add it to this.items
   this.items.push(attraction);
 };

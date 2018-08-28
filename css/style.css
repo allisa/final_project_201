@@ -125,6 +125,7 @@ img {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  /* especially when you've got them all filled in, using shorthands makes sense for padding and font */
   padding-left: 0.5em;
   padding-top: 0.3em;
   padding-right: 0.3em;
@@ -228,6 +229,7 @@ img {
 }
 
 /* random button hidden until there is many more locations */
+/* since this button is commented out, this css is irrelevant. */
 .btn__random {
   display: none;
   bottom: 4em;
@@ -239,6 +241,7 @@ img {
   position: relative;
 }
 
+/* empty declarations like this can be removed! */
 .btn__goto {
 }
 
@@ -422,6 +425,7 @@ p.media-text {
   .header--common {
     display: block;
   }
+  /* zombie code */
   .img__caption {
     /* bottom: 1em; */
     top: 1.8em;

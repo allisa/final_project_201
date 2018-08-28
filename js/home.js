@@ -9,7 +9,11 @@ function loadList() {
   myNotesBtn.innerHTML = `my notes (${list.items.length})`;
 }
 
+// A lot of the structure of this code seems left-over from labs.
+// It's not clear to me why this function is broken out from the
+// event listener, but other long pieces of functionality are not.
 function informUser() {
+  // lots of zombie code! It's always best to remove code like this.
   // var navWrapperElm = document.querySelector('.nav__wrapper');
   var notifyElm = document.createElement('span');
   notifyElm.className = 'nav__notify';
@@ -69,6 +73,7 @@ navLeftBtnElm.addEventListener('click', () => mySiema.prev());
 navRightBtnElm.addEventListener('click', () => mySiema.next());
 
 addBtn.addEventListener('click', function() {
+  // could use .any here to make your life better
   for (var i = 0; i < list.items.length; i++) {
     if (
       list.items[i].name ===
@@ -79,10 +84,14 @@ addBtn.addEventListener('click', function() {
   informUser();
   list.addItem(Attraction.allAttractions[mySiema.currentSlide]);
   localStorage.setItem('attractionList', JSON.stringify(list.items));
+  // Since this is text, better to use textContent instead of innerHTML
   myNotesBtn.innerHTML = `my notes (${list.items.length})`;
   mySiema.next();
 });
 
+// If you have an event listener whose sole job is setting the href,
+// then you should really make this an a tag instead. You can still style
+// it to look however you want.
 goToBtn.addEventListener('click', function() {
   window.location.href = 'info.html';
 });

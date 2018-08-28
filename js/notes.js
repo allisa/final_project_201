@@ -83,6 +83,8 @@ function showList() {
     btnDeleteElm.dataset.index = ndx;
 
     var row = document.createElement('section');
+    // setting CSS in JS is bad practice; it'd be better to put this style
+    // on a class that you also assign to this element.
     row.style = `background-image: url(${attraction.picturePath});
     background-repeat: no repeat;
     background-position: center center;
@@ -113,6 +115,7 @@ function removeItemFromList(event) {
     event.target.tagName === 'BUTTON' &&
     event.target.dataset.action === 'delete'
   ) {
+    // bad form to leave TODOs in your code, especially when it reveals the copy/paste nature of the code
     // TODO: When a delete button is clicked, use attractionsList.removeItem to remove the correct item
     attractionsList.removeItem(event.target.dataset.index);
     // TODO: Save the attractionsList back to local storage
@@ -123,5 +126,5 @@ function removeItemFromList(event) {
   }
 }
 
-// This will initialize the page and draw the attraction list on screen\
+// This will initialize the page and draw the attraction list on screen.
 renderList();
